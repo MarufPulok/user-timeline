@@ -30,10 +30,10 @@ const Topbar = (props: Props) => {
         </div>
         <div className="flex gap-4">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage src="/assets/user.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <p className="text-light-1">Shad</p>
+          <p className="text-light-1">Leanne Graham</p>
         </div>
       </div>
     </nav>

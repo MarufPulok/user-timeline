@@ -27,7 +27,7 @@ const UserList = async (props: Props) => {
             >
               <div className="flex gap-4">
                 <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <AvatarImage src="assets/user.jpg" />
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
                 <p className="text-heading5-bold text-light-1">{user.name}</p>

@@ -26,7 +26,10 @@ export default async function UserProfilePage({
 
   return (
     <div className="flex flex-col space-y-6">
-      <h1 className="head-text text-left">User Timeline</h1>
+      <h1 className="head-text text-left">
+        User Timeline of{" "}
+        {users.find((user) => user.id === parseInt(params.userId))?.name}
+      </h1>
       {userPostWithUsername.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}
