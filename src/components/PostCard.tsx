@@ -12,7 +12,12 @@ const PostCard = ({ post }: Props) => {
       <div className="flex items-start justify-between">
         <div className="flex w-full flex-1 flex-row gap-4">
           <div className="flex flex-col items-center">
-            <Link href="/" className="relative h-11 w-11">
+            <Link
+              href={`/profile/${post.userId}`}
+              className="relative h-11 w-11
+            hover:scale-105 transition-transform duration-300 ease-in-out
+            "
+            >
               <Image
                 src={"/assets/user.jpg"}
                 alt="user_community_image"
@@ -23,8 +28,12 @@ const PostCard = ({ post }: Props) => {
             <div className="thread-card_bar"></div>
           </div>
           <div className="flex w-full flex-col">
-            <Link href="/" className="w-fit">
-              <h4 className="cursor-pointer text-base-semibold text-light-1">
+            <Link href={`/profile/${post.userId}`} className="w-fit">
+              <h4
+                className="cursor-pointer text-base-semibold text-light-1
+               hover:underline transition-transform duration-300 ease-in-out
+              "
+              >
                 {post.user}
               </h4>
             </Link>
@@ -37,15 +46,15 @@ const PostCard = ({ post }: Props) => {
                   alt="heart"
                   width={24}
                   height={24}
-                  className="cursor-pointer object-contain"
+                  className="cursor-pointer object-contain hover:scale-105 transition-transform duration-300 ease-in-out"
                 />
-                <Link href={`/thread/2`}>
+                <Link href={`/`}>
                   <Image
                     src="/assets/reply.svg"
                     alt="reply"
                     width={24}
                     height={24}
-                    className="cursor-pointer object-contain"
+                    className="cursor-pointer object-contain hover:scale-105 transition-transform duration-300 ease-in-out"
                   />
                 </Link>
                 <Image
@@ -53,14 +62,14 @@ const PostCard = ({ post }: Props) => {
                   alt="repost"
                   width={24}
                   height={24}
-                  className="cursor-pointer object-contain"
+                  className="cursor-pointer object-contain hover:scale-105 transition-transform duration-300 ease-in-out"
                 />
                 <Image
                   src="/assets/share.svg"
                   alt="share"
                   width={24}
                   height={24}
-                  className="cursor-pointer object-contain"
+                  className="cursor-pointer object-contain hover:scale-105 transition-transform duration-300 ease-in-out"
                 />
               </div>
             </div>
