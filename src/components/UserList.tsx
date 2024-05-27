@@ -1,7 +1,6 @@
 import { default as UserService } from "@/services/user.service";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Card } from "./ui/card";
 
 type Props = {};
 

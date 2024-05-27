@@ -1,8 +1,17 @@
+import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
+import UserList from "../UserList";
 
 type Props = {};
 
@@ -34,6 +43,19 @@ const Topbar = (props: Props) => {
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <p className="text-light-1">Leanne Graham</p>
+
+          <Sheet>
+            <SheetTrigger>
+              <MenuIcon size={24} className="text-light-2 lg:hidden" />
+            </SheetTrigger>
+
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>All Users</SheetTitle>
+              </SheetHeader>
+              <UserList />
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>
